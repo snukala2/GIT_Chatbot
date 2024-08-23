@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f4f4; /* Light background color for contrast */
+            color: #333; /* Dark text color for readability */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        .header_container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            padding: 10px 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header_container .menu {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .header_container .menu nav {
+            flex-grow: 1;
+        }
+
+        .header_container .menu nav ul {
+            list-style: none;
+            display: flex;
+            margin: 20px;
+            padding: 0;
+            /* justify-content: space-between;  */
+        }
+
+        .header_container .menu nav ul li {
+            margin-right: 20px;
+        }
+
+        .header_container .menu nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .web-view-btn {
+            padding: 10px 20px;
+            background-color: #007637;
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            
+        }
+
+        .menu img {
+            height: 50px; /* Adjust height as needed */
+            margin-right: 20px; /* Space between the logo and the navigation */
+        }
+
+        /* Hero Section */
+        .hero {
+            width: auto;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            background-color: #e2e8f0;
+        }
+
+        .hero .text {
+            max-width: 50%;
+            text-align: center;
+        }
+
+        .hero .text h2 {
+            font-size: 40px; /* Adjust heading size as needed */
+            color: #007637; /* GITAM University green */
+            margin-left: 20px; /* Space between the image and the heading */
+        }
+        .hero .text p 
+        {
+            font-size: 1.0rem;
+            padding: 5px 10px;
+            margin-bottom: 20px;
+        }
+        .hero .categories button
+        {
+            padding: 10px 15px;
+            margin-right: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #333;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor:default;
+        }
+
+        .hero .image img {
+            max-width: 240px; /* Adjust size as needed */
+            margin: 30px;
+        }
+
+        /* Chat Interface */
+        #chatbox { 
+            width: 80%; 
+            height: 300px; 
+            border: 2px solid #007637; /* GITAM University green border */
+            padding: 10px; 
+            margin: 20px auto;
+            background-color: #fff; /* White background for the chatbox */
+            border-radius: 8px; /* Rounded corners for a modern look */
+            overflow-y: scroll; 
+            position: relative;
+        }
+
+        .message-container {
+            display: flex;
+            margin: 10px 0;
+            flex-direction: column;
+        }
+
+        .message-container.user {
+            align-items: flex-end;
+        }
+
+        .message-container.bot {
+            align-items: flex-start;
+        }
+
+        .message-box {
+            max-width: 70%;
+            padding: 10px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .message-box.user {
+            background-color: #007637; /* GITAM University green for user messages */
+            color: white;
+        }
+
+        .message-box.bot {
+            background-color: #f4f4f4; /* Light background color for bot messages */
+            color: #333;
+            border: 1px solid #ddd; /* Light border for bot messages */
+        }
+
+        .profile-pic {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            margin: 0 10px;
+        }
+
+        #message-box {
+            display: flex;
+            width: 80%;
+            margin: 10px auto;
+        }
+
+        #message { 
+            flex-grow: 1;
+            padding: 10px; 
+            border: 1px solid #007637; /* GITAM University green border */
+            border-radius: 4px; /* Rounded corners for the input box */
+            margin-right: 10px; /* Space between the input and button */
+        }
+
+        button { 
+            padding: 10px 20px; /* Medium size button */
+            border: none; 
+            background-color: #007637; /* GITAM University green background */
+            color: #fff; /* White text color */
+            border-radius: 4px; /* Rounded corners for the button */
+            cursor: pointer; 
+            flex-shrink: 0; /* Prevent the button from shrinking */
+        }
+
+        button:hover { 
+            background-color: #005f2d; /* Darker green for hover effect */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero .text {
+                max-width: 100%;
+            }
+
+            .hero .image img {
+                margin-top: 20px;
+            }
+
+            .header_container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header_container .menu nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header_container .menu nav ul li {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+
+            .web-view-btn {
+                margin-top: 10px;
+            }
+
+            #chatbox, #message-box {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header_container">
+        <div class="menu">
+            <img src="./images/image_1.jpg" alt="GITAM Logo">
+            <h3>CATS</h3>
+            <nav>
+                <ul>
+                    <li><a href="About">About</a></li>
+                    <li><a href="Services">Services</a></li>
+                    <li><a href="Careers">Careers</a></li>
+                    <li><a href="Contact Us">Contact Us</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="web-view-btn">Web View</a>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div class="text">
+            <h2>Meet Your New<br>Co-Pilot</h2>
+            <p>Cost-effective solution to generate text in<br> 
+            seconds and increasing your conversion rate.</p>
+            <div class="categories">
+                <button>Networking</button>
+                <button>IT Support</button>
+                <button>Data Management</button>
+                <button>Cyber Security</button>
+                <button>Cloud Computing</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="images/bot_new.jpg" alt="Chatbot Mascot"/>
+        </div>
+    </div>
+
+    <div id="chatbox"></div>
+
+    <div id="message-box">
+        <input type="text" id="message" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        function appendMessage(message, fromBot) {
+            const chatbox = document.getElementById('chatbox');
+            const messageContainer = document.createElement('div');
+            const messageBox = document.createElement('div');
+            const profilePic = document.createElement('img');
+
+            messageContainer.classList.add('message-container', fromBot ? 'bot' : 'user');
+            messageBox.classList.add('message-box', fromBot ? 'bot' : 'user');
+            messageBox.textContent = message;
+
+            profilePic.src = fromBot ? './images/bot.jpg' : './images/bang.jpg';
+            profilePic.alt = fromBot ? 'Bot Profile' : 'User Profile';
+            profilePic.classList.add('profile-pic');
+
+            messageContainer.appendChild(profilePic);
+            messageContainer.appendChild(messageBox);
+            chatbox.appendChild(messageContainer);
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        function sendMessage() {
+            const messageInput = document.getElementById('message');
+            const message = messageInput.value;
+            if (!message) return;
+            appendMessage(message, false);
+            messageInput.value = '';
+
+            fetch('/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({ 'message': message })
+            })
+            .then(response => response.json())
+            .then(data => appendMessage(data.response, true))
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+    </body>
+</html>

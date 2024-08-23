@@ -1,0 +1,58 @@
+question,answer
+hi,Hello! How can I assist you today?
+hello,Hello! How can I assist you today?
+hey,Hello! How can I assist you today?
+what is your name?,I am a chatbot created by you.
+how are you?,I am just a program, but I am doing well. How can I help you?
+what can you do?,I can chat with you and answer some basic questions.
+quit,Goodbye! Have a great day!
+exit,Goodbye! Have a great day!
+bye,Goodbye! Have a great day!
+what are the current it issues?,We are experiencing issues with network connectivity, server backup, and data reporting.
+network issues,Our network team is working on connectivity problems. Please be patient as we resolve this.
+network problem,Our network team is working on connectivity problems. Please be patient as we resolve this.
+server backup issues,There are some delays with server backups. Our team is addressing the issue.
+server issues,There are some delays with server backups. Our team is addressing the issue.
+storage issues,We are having issues with server storage. This is being handled by our IT team.
+storage problem,We are having issues with server storage. This is being handled by our IT team.
+data reporting issues,We are facing some challenges with data reporting. Our team is on it.
+loading issues,We are facing some challenges with data reporting. Our team is on it.
+i forgot my password,Please contact the IT support team for password recovery assistance.
+forgot password,Please contact the IT support team for password recovery assistance.
+how do i reset my password?,To reset your password, follow the instructions on our password reset page or contact IT support.
+can i change my username?,Username changes are not typically allowed. Please contact IT support for any special requests.
+how do i install software,You can find installation guides on our IT support website or contact us for help.
+install software,You can find installation guides on our IT support website or contact us for help.
+my computer is slow,Try restarting your computer or contact IT support if the issue persists.
+network slow,Try restarting your computer or contact IT support if the issue persists.
+slow network,Try restarting your computer or contact IT support if the issue persists.
+i have a software bug,Please describe the issue in detail so we can assist you effectively.
+bug issue,Please describe the issue in detail so we can assist you effectively.
+bug,Please describe the issue in detail so we can assist you effectively.
+how do i connect to the wi-fi?,Use the Wi-Fi settings on your device to connect to the GITAM network.
+wifi connection,Use the Wi-Fi settings on your device to connect to the GITAM network.
+wifi is not working,Check your device settings or contact IT support if you need further assistance.
+my printer is not working,Check the connections and ensure the printer is on. If issues persist, contact IT support.
+printer issue,Check the connections and ensure the printer is on. If issues persist, contact IT support.
+printer problem,Check the connections and ensure the printer is on. If issues persist, contact IT support.
+monitor is blank,Ensure the monitor is plugged in and turned on. If the problem continues, please contact support.
+monitor not working,Ensure the monitor is plugged in and turned on. If the problem continues, please contact support.
+what are the it policies?,Our IT policies can be found on the university’s IT services website.
+how do i request new software?,Submit a request through our IT service portal or contact IT support.
+software request,Submit a request through our IT service portal or contact IT support.
+what is the helpdesk number?,The helpdesk number is 123-456-7890.
+helpdesk number,The helpdesk number is 123-456-7890.
+what are the office hours?,Our office hours are Monday to Friday, 9 AM to 5 PM.
+office timings,Our office hours are Monday to Friday, 9 AM to 5 PM.
+can you help with my email?,Please specify the issue with your email, and I will do my best to assist.
+where can i find user guides?,User guides are available on our IT support website or through our helpdesk.
+i need help with my laptop,Please provide details about the issue with your laptop so we can assist you.
+issue in my laptop,Please provide details about the issue with your laptop so we can assist you.
+what services does gitam cats provide?,We offer support for network issues, hardware problems, software installations, and more.
+how do i report a technical issue?,You can report technical issues through our IT support portal or contact the helpdesk.
+technical issue,You can report technical issues through our IT support portal or contact the helpdesk.
+how do i secure my account?,Use a strong password and enable two-factor authentication for added security.
+account privacy,Use a strong password and enable two-factor authentication for added security.
+what should i do if i suspect a security breach?,Immediately report the issue to IT support and change your passwords.
+i need more help,Please describe your issue in detail, and I will direct you to the appropriate support.
+can i speak to a human?,I can assist with many issues, but if you need further help, I will connect you with a support agent.
